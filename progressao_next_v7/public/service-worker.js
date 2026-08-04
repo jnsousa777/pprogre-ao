@@ -1,4 +1,4 @@
-const CACHE = "progressao-next-v7-1";
+const CACHE = "progressao-next-v7-2";
 const CORE = [
   "/",
   "/static/app.js",
