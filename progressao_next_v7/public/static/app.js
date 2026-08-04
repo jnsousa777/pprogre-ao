@@ -1081,7 +1081,10 @@ window.addEventListener("beforeinstallprompt", event => {
   deferredInstallPrompt = event;
 });
 
-document.addEventListener("DOMContentLoaded", async () => {
+async function startProgressaoApp() {
+  if (window.__progressaoAppStarted) return;
+  window.__progressaoAppStarted = true;
+
   bindGateEvents();
   const config = await loadCloudConfig();
   if (!config) { showConnectionScreen(); return; }
@@ -1109,4 +1112,13 @@ document.addEventListener("DOMContentLoaded", async () => {
     showConnectionScreen();
     alert(`Não foi possível conectar ao Supabase: ${error.message}`);
   }
-});
+}
+
+// Este módulo é injetado pelo React depois da hidratação. Nesse momento,
+// DOMContentLoaded pode já ter ocorrido; por isso iniciamos imediatamente
+// quando o documento já está pronto.
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", startProgressaoApp, { once: true });
+} else {
+  startProgressaoApp();
+}
