@@ -1,0 +1,7 @@
+PROGRESSÃO NEXT V7
+
+1. O banco do Supabase já criado continua válido. Não rode o SQL outra vez.
+2. Publique pelo PC seguindo docs/DEPLOY_PC_VERCEL.md.
+3. Além das duas variáveis do Supabase, configure OPENAI_API_KEY no Vercel.
+4. A chave da OpenAI nunca deve começar com NEXT_PUBLIC_.
+5. ChatGPT Plus não inclui créditos da API; o faturamento é separado.

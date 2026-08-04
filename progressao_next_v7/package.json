@@ -1,0 +1,20 @@
+{
+  "name": "progressao-next",
+  "version": "7.0.0",
+  "private": true,
+  "description": "Diário de treino mobile-first com Next.js, Vercel, Supabase e IA contextual",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test": "node --experimental-default-type=module --test tests/*.test.mjs"
+  },
+  "dependencies": {
+    "next": "16.2.11",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "engines": {
+    "node": "22.x"
+  }
+}

@@ -1,0 +1,3 @@
+Progressão Next v7.0.0
+Base: Next.js 16.2.11 + React 19 + Supabase + OpenAI Responses API
+Compatível com o schema Supabase da v5/v6.
